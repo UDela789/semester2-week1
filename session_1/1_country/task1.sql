@@ -12,4 +12,6 @@
 
 -- write your sql code here
 
-SELECT * from countries;
+SELECT *
+FROM countries
+WHERE Population > 100000000
