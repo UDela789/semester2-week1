@@ -2,5 +2,4 @@
 -- Expected Columns:
 -- DepartmentName, TotalEnrolments
 
-SELECT DepartmentName, TotalEnrolments
-FROM 
+SELECT SUM()
