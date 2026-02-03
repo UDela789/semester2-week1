@@ -4,4 +4,4 @@
 
 SELECT Student.StudentId, Student.FirstName, Student.LastName, COUNT(Enrolment.EnrolmentId) AS TotalCreditsPassed
 FROM Student JOIN Enrolment ON Student.StudentId = Enrolment.StudentId
-GROUP BY Enrolment.EnrolmentId HAVING Grade > 40;
+GROUP BY Student.StudentId HAVING Enrolment.Grade >= 40;
