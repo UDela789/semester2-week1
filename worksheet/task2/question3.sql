@@ -2,4 +2,8 @@
 -- Expected Columns:
 -- DepartmentName, TotalEnrolments
 
-SELECT SUM()
+SELECT Department.DepartmentName, COUNT(EnrolmentId) AS TotalEnrolments 
+FROM Enrolment
+JOIN Course ON Enrolment.CourseId = Course.CourseId
+JOIN Department ON Course.DepartmentId = Department.DepartmentId
+GROUP BY DepartmentName; 
